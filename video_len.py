@@ -7,7 +7,7 @@ import moviepy.editor
 import os
 
 
-extension_name = '.mp4'
+extension_names = ['.ts', '.mp4']
 
 
 # Converts into more readable format
@@ -39,8 +39,9 @@ for (root, dirs, file) in os.walk(path):
     cdir_len = 0
 
     for f in sorted(file):
-        if extension_name in f:
-            cdir_len += get_videolen(root+'/'+f)
+        for extension_name in extension_names:
+            if extension_name in f:
+                cdir_len += get_videolen(root+'/'+f)
 
     if cdir_len > 0:
         hours, mins, secs = convert(cdir_len)
