@@ -6,7 +6,7 @@ import time
 
 driver = webdriver.Chrome()
 # Enter your playlist URL here
-url = "https://www.youtube.com/playlist?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+url = "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go"
 driver.get(url)
 
 html_elm = driver.find_element_by_tag_name('html')
